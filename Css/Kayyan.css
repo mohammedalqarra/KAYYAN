@@ -28,7 +28,9 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: #333;
 }
-
+a {
+  text-decoration: none;
+}
 section {
   padding: 5rem 9%;
 }
@@ -213,6 +215,8 @@ section {
   color: #219150;
 }
 
+
+
 .home {
   padding: 0;
 }
@@ -226,6 +230,7 @@ section {
   justify-content: flex-end;
   padding: 2rem 9%;
 }
+
 
 .swiper-slide .box::before {
   content: "";
@@ -266,6 +271,38 @@ section {
   color: #fff;
   font-size: 3rem;
   padding: 1rem 0;
+}
+.contact {
+  padding: 0;
+}
+
+.contact .box {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: center;
+  padding: 2rem 9%;
+}
+
+.contact .box .content {
+  position: relative;
+  width: auto;
+  text-align: center;
+}
+
+.contact .box .content h3 {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.contact .box .content p {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.5;
 }
 
 .content ul {
@@ -329,6 +366,7 @@ section {
   padding: 1rem 0;
   line-height: 2;
 }
+
 /*about*/
 .about {
   text-align: right;
@@ -820,4 +858,208 @@ section {
     .header .navbar a {
     color: #000;
   }
+}
+
+
+
+textarea{
+  resize: none;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  text-align: right;
+  resize: none;
+}
+
+/* Style Contact page */
+.contact_page {
+    position: relative;
+    background: #fff;
+}
+
+.list-contact {
+    margin-bottom: 80px;
+}
+
+.item-contact {
+    position: relative;
+    text-align: center;
+}
+
+.item-contact:before {
+    content: "";
+    background: url(../images/shape-cir.svg);
+    background-size: 100% 100%;
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+.col-lg-4:last-child .item-contact:before {
+    display: none;
+}
+
+.item-contact p {
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.item-contact span {
+    display: block;
+    margin: 15px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.item-contact strong {
+    display: block;
+    color: var(--main-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dt-contact h4 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.form-contact textarea.form-control {
+    height: 130px;
+}
+
+.form-contact .btn-site {
+    width: 100%;
+}
+
+.thumb-map {
+    position: relative;
+}
+
+.location-one {
+    top: 150px;
+    right: 325px;
+}
+
+.location-tow {
+    top: 170px;
+    right: 300px;
+}
+
+.location-three {
+    top: 130px;
+    right: 300px;
+}
+
+.item-location {
+    position: absolute;
+}
+
+.pin-location .item-location > span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--main-color);
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto 30px;
+    z-index: 99;
+}
+
+.pin-location .item-location > span:before {
+    content: "";
+    background: rgb(67 180 149 / 30%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    animation: waves 3s ease-in-out infinite;
+}
+
+.dta-location {
+    background: #fff;
+    width: 230px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 7px rgb(0 0 0 / 16%);
+    position: relative;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s;
+    transform: translate3d(0, 15px, 0);
+}
+
+.item-location span:hover ~ .dta-location {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.dta-location figure img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.dta-location p {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.dta-location span {
+    color: #666;
+    font-size: 13px;
+    display: block;
+}
+
+.dta-location:after {
+    content: "";
+    background: url(../images/shape-cir.svg);
+    background-size: 100% 100%;
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.dta-location:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+    transition: border-color 0.3s;
+}
+
+@keyframes waves {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }
